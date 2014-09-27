@@ -27,6 +27,7 @@ reference:
 import os
 from qgis.core import *
 from processing.core.VectorWriter import VectorWriter
+from processing.core.GeoAlgorithmExecutionException import GeoAlgorithmExecutionException
 
 # is_number
 def is_number(s):
@@ -47,10 +48,10 @@ try:
     else:
         dest_crs.createFromString(Dest_CRS)
 except Exception as detail:
-    raise Exception('Invalid Target CRS: %s' % detail)
+    raise GeoAlgorithmExecutionException('Invalid Target CRS: %s' % detail)
 
 if not dest_crs.isValid():
-    raise Exception(Dest_CRS)
+    raise GeoAlgorithmExecutionException(Dest_CRS)
 
 # http://www.qgis.org/api/classQgsCoordinateTransform.html
 trans = QgsCoordinateTransform()

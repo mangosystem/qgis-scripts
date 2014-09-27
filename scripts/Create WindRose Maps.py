@@ -97,7 +97,7 @@ def create_line(centroid, degree, radius):
     return QgsGeometry.fromPolyline(outer_ring)
 
 #. select point layer
-input_layer = processing.getObject(Input_Point_Layer)
+input_layer = processing.getobject(Input_Point_Layer)
 provider = input_layer.dataProvider()
 
 #. value field , if not provided, feature count will be used

@@ -5,6 +5,7 @@
 
 from qgis.core import *
 from processing.core.VectorWriter import VectorWriter
+from processing.core.GeoAlgorithmExecutionException import GeoAlgorithmExecutionException
 
 # ignore upper, lower case
 def find_field(fields, field_name):
@@ -18,6 +19,8 @@ def find_field(fields, field_name):
 # main
 selected_layers = Select_Vector_Layers.split(';')
 delete_fields_list = Comma_Seperated_Fields_Names_for_Delete.strip().split(',')
+if len(delete_fields_list) == 0:
+    raise GeoAlgorithmExecutionException('Comma seperated field names required!')
 
 number = 0
 for selected in selected_layers:

@@ -1,4 +1,4 @@
-﻿"""
+"""
 /***************************************************************************
 Name                 : Export To Shapefiles
 Description          : Export To Shapefiles
@@ -27,11 +27,15 @@ reference:
 import os
 from qgis.core import *
 from processing.core.VectorWriter import VectorWriter
+from processing.core.GeoAlgorithmExecutionException import GeoAlgorithmExecutionException
 
 # main
 exported = 0
 selected_layers = Select_Vector_Layers.split(';')
 selected_count = len(selected_layers)
+if selected_count == 0:
+    raise GeoAlgorithmExecutionException('Select layers first!')
+    
 for selected in selected_layers:
     layer = processing.getObject(selected)
     output_path = os.path.join(Output_Folder, layer.name() + '.shp')
