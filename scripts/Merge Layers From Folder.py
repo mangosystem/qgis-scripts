@@ -19,7 +19,9 @@ reference:
 """
 ##[My Scripts]=group
 ##Shapefile_Folder=folder
+##Pattern=String *.shp
 ##Root_Folder_Only=boolean True
+##Template_Layer=vector 
 ##Output_Merge_Layer=output vector
 
 import os, fnmatch
@@ -51,24 +53,19 @@ def find_field(fields, field_name):
 
 
 # main
-template_layer = None
-for src_file in find_files(Shapefile_Folder, '*.shp', Root_Folder_Only):
-    (head, tail) = os.path.split(src_file)
-    (name, ext) = os.path.splitext(tail)
-    template_layer = QgsVectorLayer(src_file, name, "ogr")
-    template_provider = template_layer.dataProvider()
-    template_fields = template_provider.fields()
-    template_geometry_type = template_layer.geometryType()
-    break
-
-if template_layer is None:
-    raise GeoAlgorithmExecutionException('Shapefile does not exist.')
+template_layer = processing.getObject(Template_Layer)
+template_provider = template_layer.dataProvider()
+template_fields = template_provider.fields()
+template_geometry_type = template_layer.geometryType()
   
 writer = VectorWriter(Output_Merge_Layer, None, template_fields, 
             template_provider.geometryType(), template_layer.crs())
 
+if not '.shp' in Pattern.lower():
+    Pattern += '.shp'
+
 count = 0
-for src_file in find_files(Shapefile_Folder, '*.shp', Root_Folder_Only):
+for src_file in find_files(Shapefile_Folder, Pattern, Root_Folder_Only):
     (head, tail) = os.path.split(src_file)
     (name, ext) = os.path.splitext(tail)
     layer = QgsVectorLayer(src_file, name, "ogr")
