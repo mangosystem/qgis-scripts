@@ -19,7 +19,7 @@ reference:
 """
 ##[My Scripts]=group
 ##Input_Layer_To_Be_Splitted=vector
-##Split_Layer=vector
+##Split_Layer=vector polygon
 ##Unique_Value_Field=field Split_Layer
 ##Use_Prefix_As_Layer_Name=boolean True
 ##Multipart_To_Singleparts=boolean

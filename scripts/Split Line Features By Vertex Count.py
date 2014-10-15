@@ -18,7 +18,7 @@ reference:
  ***************************************************************************/
 """
 ##[My Scripts]=group
-##Line_Layer=vector
+##Line_Layer=vector line
 ##Vertex_Count=number 25
 ##output=output vector
 
