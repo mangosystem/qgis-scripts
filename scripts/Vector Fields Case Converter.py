@@ -23,7 +23,7 @@ reference:
 ##Output=output vector
 
 from qgis.core import *
-from processing.core.VectorWriter import VectorWriter
+from processing.tools.vector import VectorWriter
 
 vectorLayer = processing.getObject(Vector_Layer)
 provider = vectorLayer.dataProvider()

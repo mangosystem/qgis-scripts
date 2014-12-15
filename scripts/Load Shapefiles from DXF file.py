@@ -28,7 +28,7 @@ import os, subprocess
 from osgeo import gdal, ogr, osr
 from qgis.core import *
 from processing.core.ProcessingLog import ProcessingLog
-from processing.core.VectorWriter import VectorWriter
+from processing.tools.vector import VectorWriter
 
 # =================================================================
 # http://www.gdal.org/ogr/drv_dxf.html

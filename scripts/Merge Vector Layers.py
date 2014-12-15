@@ -23,7 +23,7 @@ reference:
 ##Output_Merge_Layer=output vector
 
 from qgis.core import *
-from processing.core.VectorWriter import VectorWriter
+from processing.tools.vector import VectorWriter
 
 # ignore upper, lower case
 def find_field(fields, field_name):

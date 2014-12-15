@@ -30,7 +30,7 @@ reference:
 from PyQt4.QtCore import *
 from qgis.core import *
 from qgis.gui import *
-from processing.core.VectorWriter import VectorWriter
+from processing.tools.vector import VectorWriter
 import math
 
 # global environment

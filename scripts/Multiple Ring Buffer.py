@@ -27,7 +27,7 @@ import os
 from PyQt4.QtCore import *
 from qgis.core import *
 from qgis.gui import *
-from processing.core.VectorWriter import VectorWriter
+from processing.tools.vector import VectorWriter
 from processing.core.GeoAlgorithmExecutionException import GeoAlgorithmExecutionException
 
 # check values

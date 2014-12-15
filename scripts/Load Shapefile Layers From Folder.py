@@ -25,7 +25,7 @@ reference:
 import os, fnmatch
 from qgis.core import *
 from qgis.utils import iface
-from processing.core.VectorWriter import VectorWriter
+from processing.tools.vector import VectorWriter
 
 # function
 def find_files(directory, pattern, only_root_directory):

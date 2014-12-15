@@ -26,7 +26,7 @@ reference:
 
 import os
 from qgis.core import *
-from processing.core.VectorWriter import VectorWriter
+from processing.tools.vector import VectorWriter
 from processing.core.GeoAlgorithmExecutionException import GeoAlgorithmExecutionException
 
 input_layer = processing.getObject(Input_Layer)

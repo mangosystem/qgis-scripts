@@ -29,7 +29,7 @@ import os, sys, math
 from PyQt4.QtCore import *
 from qgis.core import *
 from qgis.utils import iface
-from processing.core.VectorWriter import VectorWriter
+from processing.tools.vector import VectorWriter
 from processing.core.ProcessingLog import ProcessingLog
 from processing.tools import vector
 
