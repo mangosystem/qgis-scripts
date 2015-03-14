@@ -18,6 +18,7 @@ reference:
  ***************************************************************************/
 """
 ##[My Scripts]=group
+##Load Shapefile Layers from Folder=name
 ##Shapefile_Folder=folder
 ##Root_Folder_Only=boolean True
 ##output=output number

@@ -18,6 +18,7 @@ reference:
  ***************************************************************************/
 """
 ##[My Scripts]=group
+##Split Line Features By Vertex Count=name
 ##Line_Layer=vector line
 ##Vertex_Count=number 25
 ##output=output vector

@@ -18,6 +18,7 @@ reference:
  ***************************************************************************/
 """
 ##[My Scripts]=group
+##Multiple Ring Buffer=name
 ##Input_Layer=vector
 ##Comma_Seperated_Distance_Values=String
 ##Outside_Only=boolean false

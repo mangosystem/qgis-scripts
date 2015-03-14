@@ -18,6 +18,7 @@ reference:
  ***************************************************************************/
 """
 ##[My Scripts]=group 
+##Merge Vector Layers=name
 ##Select_Vector_Layers=multiple vector
 ##Template_Layer=vector 
 ##Output_Merge_Layer=output vector

@@ -18,6 +18,7 @@ reference:
  ***************************************************************************/
 """
 ##[My Scripts]=group
+##Vector Field Case Converter=name
 ##Vector_Layer=vector
 ##Upper_Case=boolean
 ##Output=output vector

@@ -18,6 +18,7 @@ reference:
  ***************************************************************************/
 """
 ##[My Scripts]=group 
+##Load Shapefiles from DXF file=name
 ##Input_DXF_file=file
 ##Source_CRS=crs EPSG:32652 
 ##Points_Shapefile=output vector

@@ -18,6 +18,7 @@ reference:
  ***************************************************************************/
 """
 ##[My Scripts]=group 
+##Reproject Vector Layers=name
 ##Select_Vector_Layers=multiple vector
 ##Dest_CRS=crs EPSG:3857 
 ##Output_Folder=folder

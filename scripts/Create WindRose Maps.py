@@ -18,6 +18,7 @@ reference:
  ***************************************************************************/
 """
 ##[My Scripts]=group 
+##Create WindRose Maps=name
 ##Input_Point_Layer=vector
 ##Use_Weight_Field=boolean
 ##Weight_Field=field Input_Point_Layer

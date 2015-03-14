@@ -1,6 +1,28 @@
+"""
+/***************************************************************************
+Name                 : Delete Fields From Layers
+Description          : Delete Fields From Layers
+Date                 : 31/Dec/2013
+copyright            : (C) 2013 by Minpa Lee
+email                : mapplus@gmail.com
+reference:
+    http://gis.stackexchange.com/questions/6682/how-to-implement-ringmaps-in-arcgis
+    http://www.esri.com/esri-news/arcuser/fall-2013/looking-at-temporal-changes
+ ***************************************************************************/
+
+/***************************************************************************
+ *                                                                         *
+ *   This program is free software; you can redistribute it and/or modify  *
+ *   it under the terms of the GNU General Public License as published by  *
+ *   the Free Software Foundation; either version 2 of the License, or     *
+ *   (at your option) any later version.                                   *
+ *                                                                         *
+ ***************************************************************************/
+"""
 ##[My Scripts]=group 
+##Delete Fields From Layers=name
 ##Select_Vector_Layers=multiple vector
-##Comma_Seperated_Fields_Names_for_Delete=String RDS_MAN_NO,RDS_SIG_CD,MVMN_RESN,MVM_RES_CD,NTFC_DE,OPE_MAN_ID,MNTN_YN,MVMN_DE
+##Comma_Seperated_Fields_Names_for_Delete=String
 ##number=output number
 
 from qgis.core import *

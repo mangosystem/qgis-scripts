@@ -18,6 +18,7 @@ reference:
  ***************************************************************************/
 """
 ##[My Scripts]=group 
+##Export To Shapefiles=name
 ##Select_Vector_Layers=multiple vector
 ##Include_gid_column=boolean
 ##Output_Folder=folder

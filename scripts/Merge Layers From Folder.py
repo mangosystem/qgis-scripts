@@ -1,7 +1,7 @@
 """
 /***************************************************************************
 Name                 : Merge Layers from Folder
-Description          : Merge from Folder
+Description          : Merge Layers from Folder
 Date                 : 25/Dec/2014
 copyright            : (C) 2014 by Minpa Lee
 email                : mapplus@gmail.com
@@ -18,6 +18,7 @@ reference:
  ***************************************************************************/
 """
 ##[My Scripts]=group
+##Merge Layers from Folder=name
 ##Shapefile_Folder=folder
 ##Pattern=String *.shp
 ##Root_Folder_Only=boolean True

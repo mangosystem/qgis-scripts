@@ -18,6 +18,7 @@ reference:
  ***************************************************************************/
 """
 ##[My Scripts]=group
+##Split Layer By Features=name
 ##Input_Layer_To_Be_Splitted=vector
 ##Split_Layer=vector polygon
 ##Unique_Value_Field=field Split_Layer
