@@ -6,6 +6,8 @@ QGIS의 Processing 플러그인에 활용할 수 있는 스크립트
 Scripts
 --------
  - Calculate Nearest Neighbor Index.py
+ - Calculate Point Attribute From Polygon Features.py
+ - Count Points in Polygon Features.py
  - Create Ring Maps.py
  - Create WindRose Maps.py
  - Delete Fields From Layers.py
