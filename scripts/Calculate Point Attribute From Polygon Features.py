@@ -20,9 +20,9 @@ reference:
 ##[KOCER]=group
 ##Calculate Point Attribute From Polygon Features=name
 ##Point_Layer=vector point
-##Target_Fields=string bd_mgt_sn, sid_nm, sgg_nm, emd_nm, ri_nm, jbn_addr, rdn_addr
+##Target_Fields=string pnu
 ##Polygon_Layer=vector polygon
-##Source_Fields=string bd_mgt_sn, sid_nm, sgg_nm, emd_nm, ri_nm, jbn_addr, rdn_addr
+##Source_Fields=string pnu
 ##Result=output string
 
 from PyQt4.QtCore import *
@@ -59,7 +59,7 @@ for feature in polygon_features:
     spatial_index.insertFeature(feature)
     
 # =============================================================================
-# count point in polygon
+# point in polygon
 # =============================================================================
 point_features = processing.features(point_layer)
 point_count = len(point_features)
@@ -71,20 +71,22 @@ for point_feature in point_features:
     
     id = int(point_feature.id())
     point = point_feature.geometry()
-    buffered = point.buffer(0.1, 4)
     
     polygon_feature = None
-    fids = spatial_index.intersects(buffered.boundingBox())
+    fids = spatial_index.intersects(point.boundingBox())
     for fid in fids:
         request = QgsFeatureRequest().setFilterFid(int(fid))
-        polygon_feature = polygon_layer.getFeatures(request).next()
-        break
+        feature = polygon_layer.getFeatures(request).next()
+        polygon = feature.geometry()
+        if polygon.intersects(point):
+            polygon_feature = feature
+            break
             
-    for idx_target in field_index.keys():
-        value = None
-        if polygon_feature:
-            value = polygon_feature[field_index[idx_target]]
-        point_layer.changeAttributeValue(id, idx_target, value)
-    
+    if polygon_feature:
+      for idx_target in field_index.keys():
+          value = None
+          if polygon_feature:
+              value = polygon_feature[field_index[idx_target]]
+          point_layer.changeAttributeValue(id, idx_target, value)
 point_layer.commitChanges()
 Result = str(current)
