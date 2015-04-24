@@ -26,6 +26,7 @@ Scripts
  - Split Layer By Attribute.py
  - Split Layer By Features.py
  - Split Line Features By Vertex Count.py
+ - Thiessen Polygons.py
  - Vector Fields Case Converter.py
  - Vector To Raster Conversion.py
 
