@@ -30,6 +30,13 @@ Scripts
  - Vector Fields Case Converter.py
  - Vector To Raster Conversion.py
 
+Gallery
+---------
+
+![screenshot](https://github.com/mapplus/qgis-scripts/blob/master/images/WindRose.png?width=800)
+
+![screenshot](https://github.com/mapplus/qgis-scripts/blob/master/images/ringmaps.png?width=800)
+
 
 License
 --------
