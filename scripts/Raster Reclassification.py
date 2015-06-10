@@ -17,7 +17,7 @@ reference:
  *                                                                         *
  ***************************************************************************/
 """
-##[My Scripts]=group
+##[GEEPS]=group
 ##Raster Reclassification=name
 ##Input_Raster=raster
 ##Reclassify_Ranges=string 0 10 1; 10 20 2; 20 100 3

@@ -17,7 +17,7 @@ reference:
  *                                                                         *
  ***************************************************************************/
 """
-##[My Scripts]=group
+##[GEEPS]=group
 ##Split Line Features By Vertex Count=name
 ##Line_Layer=vector line
 ##Vertex_Count=number 25

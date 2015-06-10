@@ -19,7 +19,7 @@ reference:
  *                                                                         *
  ***************************************************************************/
 """
-##[My Scripts]=group 
+##[GEEPS]=group 
 ##Delete Fields From Layers=name
 ##Select_Vector_Layers=multiple vector
 ##Comma_Seperated_Fields_Names_for_Delete=String

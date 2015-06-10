@@ -17,7 +17,7 @@ reference:
  *                                                                         *
  ***************************************************************************/
 """
-##[KOCER]=group
+##[GEEPS]=group
 ##Calculate Point Attribute From Polygon Features=name
 ##Point_Layer=vector point
 ##Target_Fields=string pnu

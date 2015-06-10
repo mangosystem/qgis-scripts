@@ -17,7 +17,7 @@ reference:
  *                                                                         *
  ***************************************************************************/
 """
-##[My Scripts]=group 
+##[GEEPS]=group 
 ##Export To Shapefiles=name
 ##Select_Vector_Layers=multiple vector
 ##Include_gid_column=boolean

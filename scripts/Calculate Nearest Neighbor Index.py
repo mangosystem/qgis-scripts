@@ -17,7 +17,7 @@ reference:
  *                                                                         *
  ***************************************************************************/
 """
-##[KOCER]=group
+##[GEEPS]=group
 ##Calculate Nearest Neighbor Index=name
 ##Polygon_Layer=vector polygon
 ##Point_Layer=vector point

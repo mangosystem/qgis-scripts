@@ -22,7 +22,7 @@ reference:
  *                                                                         *
  ***************************************************************************/
 """
-##[My Scripts]=group
+##[GEEPS]=group
 ##Vector To Raster Conversion=name
 ##Vector_Layer=vector
 ##Attribute_Field=field Vector_Layer

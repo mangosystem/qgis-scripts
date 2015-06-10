@@ -17,7 +17,7 @@ reference:
  *                                                                         *
  ***************************************************************************/
 """
-##[My Scripts]=group
+##[GEEPS]=group
 ##Raster Extract by Attributes=name
 ##Input_Raster=raster
 ##Expresesion=string Value >= 0

@@ -17,7 +17,7 @@ reference:
  *                                                                         *
  ***************************************************************************/
 """
-##[My Scripts]=group 
+##[GEEPS]=group 
 ##Merge Vector Layers=name
 ##Select_Vector_Layers=multiple vector
 ##Template_Layer=vector 

@@ -22,7 +22,7 @@ reference:
  *                                                                         *
  ***************************************************************************/
 """
-##[My Scripts]=group
+##[GEEPS]=group
 ##Raster Euclidean Distance Analysis=name
 ##Vector_Layer=vector
 ##Max_Distance=number -1.0

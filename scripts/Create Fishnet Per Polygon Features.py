@@ -17,7 +17,7 @@ reference:
  *                                                                         *
  ***************************************************************************/
 """
-##[KOCER]=group
+##[GEEPS]=group
 ##Create Fishnet Per Polygon Features=name
 ##Input_Layer=vector polygon
 ##UniqueId_Field=field Input_Layer

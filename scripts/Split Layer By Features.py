@@ -17,7 +17,7 @@ reference:
  *                                                                         *
  ***************************************************************************/
 """
-##[My Scripts]=group
+##[GEEPS]=group
 ##Split Layer By Features=name
 ##Input_Layer_To_Be_Splitted=vector
 ##Split_Layer=vector polygon

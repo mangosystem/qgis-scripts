@@ -17,7 +17,7 @@ reference:
  *                                                                         *
  ***************************************************************************/
 """
-##[My Scripts]=group 
+##[GEEPS]=group 
 ##Create WindRose Maps=name
 ##Input_Point_Layer=vector
 ##Use_Weight_Field=boolean

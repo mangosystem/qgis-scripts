@@ -19,7 +19,7 @@ reference:
  *                                                                         *
  ***************************************************************************/
 """
-##[My Scripts]=group
+##[GEEPS]=group
 ##Create Ring Maps=name
 ##Input_Vector_Layer=vector
 ##Comma_separated__fields_or_Ring_number=string a3_2000, a3_2001, a3_2002, a3_2003, a3_2004, a3_2005

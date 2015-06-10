@@ -17,7 +17,7 @@ reference:
  *                                                                         *
  ***************************************************************************/
 """
-##[My Scripts]=group 
+##[GEEPS]=group 
 ##Reproject Vector Layers=name
 ##Select_Vector_Layers=multiple vector
 ##Dest_CRS=crs EPSG:3857 

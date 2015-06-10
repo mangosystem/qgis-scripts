@@ -17,7 +17,7 @@ reference:
  *                                                                         *
  ***************************************************************************/
 """
-##[My Scripts]=group 
+##[GEEPS]=group 
 ##Load Shapefiles from DXF file=name
 ##Input_DXF_file=file
 ##Source_CRS=crs EPSG:32652 

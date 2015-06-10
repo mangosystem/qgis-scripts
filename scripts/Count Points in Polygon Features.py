@@ -17,7 +17,7 @@ reference:
  *                                                                         *
  ***************************************************************************/
 """
-##[KOCER]=group
+##[GEEPS]=group
 ##Count Points in Polygon Features=name
 ##Polygon_Layer=vector polygon
 ##Polygon_Count_Field=field Polygon_Layer

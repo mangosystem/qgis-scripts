@@ -17,7 +17,7 @@ reference:
  *                                                                         *
  ***************************************************************************/
 """
-##[My Scripts]=group
+##[GEEPS]=group
 ##Raster Fuzzy Membership Function=name
 ##Input_Raster=raster
 ##Degree_Of_Membership=number 1

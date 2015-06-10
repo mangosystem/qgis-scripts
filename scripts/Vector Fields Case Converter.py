@@ -17,7 +17,7 @@ reference:
  *                                                                         *
  ***************************************************************************/
 """
-##[My Scripts]=group
+##[GEEPS]=group
 ##Vector Field Case Converter=name
 ##Vector_Layer=vector
 ##Upper_Case=boolean

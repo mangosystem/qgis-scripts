@@ -17,7 +17,7 @@ reference:
  *                                                                         *
  ***************************************************************************/
 """
-##[My Scripts]=group
+##[GEEPS]=group
 ##Split Layer By Attribute=name
 ##Input_Layer=vector
 ##Unique_Value_Field=field Input_Layer

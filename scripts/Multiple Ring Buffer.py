@@ -17,7 +17,7 @@ reference:
  *                                                                         *
  ***************************************************************************/
 """
-##[My Scripts]=group
+##[GEEPS]=group
 ##Multiple Ring Buffer=name
 ##Input_Layer=vector
 ##Comma_Seperated_Distance_Values=String

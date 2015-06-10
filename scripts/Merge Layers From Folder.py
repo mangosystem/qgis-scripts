@@ -17,7 +17,7 @@ reference:
  *                                                                         *
  ***************************************************************************/
 """
-##[My Scripts]=group
+##[GEEPS]=group
 ##Merge Layers from Folder=name
 ##Shapefile_Folder=folder
 ##Pattern=String *.shp

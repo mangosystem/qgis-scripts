@@ -17,7 +17,7 @@ reference            : processing\algs\qgisVoronoiPolygons.py
  *                                                                         *
  ***************************************************************************/
 """
-##[My Scripts]=group
+##[GEEPS]=group
 ##Thiessen Polygons=name
 ##Point_Layer=vector point
 ##Buffer_Region=number 0.00
