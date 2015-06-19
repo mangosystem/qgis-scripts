@@ -12,6 +12,7 @@ Scripts
  - Create WindRose Maps.py
  - Delete Fields From Layers.py
  - Export To Shapefiles.py
+ - Extract Raster Values To Features.py
  - Load Shapefile Layers From Folder.py
  - Load Shapefiles from DXF file.py
  - Merge Layers From Folder.py
