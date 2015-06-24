@@ -37,7 +37,7 @@ def is_number(s):
     try:
         float(s)
         return True
-    except ValueError:
+    except (TypeError, ValueError):
         return False
 
 
@@ -48,6 +48,13 @@ vec_layer    = processing.getObject(Target_Vector_Layer)
 value_field  = Target_Fields.strip()
 raster_layer = processing.getObject(Source_Raster_Layer)
 band_index   = int(Raster_Band_Index)
+
+# check crs
+crsSrc  = vec_layer.crs()      # vector layer's crs
+crsDest = raster_layer.crs()   # raster layer's crs
+xform = None
+if crsSrc.authid() != crsDest.authid():
+    xform = QgsCoordinateTransform(crsSrc, crsDest)
 
 # check field
 idx_field = vec_layer.fieldNameIndex(value_field)
@@ -65,16 +72,28 @@ for feature in features:
     progress.setPercentage(int(100 * current / point_count))
     current += 1
     
+    if feature[idx_field] != None:
+        continue
+    
     # use centroid
     geom = feature.geometry().centroid()
+    centroid = geom.asPoint()
+    if xform:
+        try:
+            centroid = xform.transform(geom.asPoint())
+        except:
+            centroid = None
     
-    # get the raster value of the cell under the vector point
-    rasterSample = raster_layer.dataProvider().identify(geom.asPoint(), QgsRaster.IdentifyFormatValue).results()
-    if not is_number(rasterSample[band_index]):
-        continue
+    if centroid:
+        # get the raster value of the cell under the vector point
+        rasterSample = raster_layer.dataProvider().identify(centroid, QgsRaster.IdentifyFormatValue).results()
+        # float() argument must be a string or a number See log for more details
+        if not is_number(rasterSample[band_index]):
+            continue
+            
+        # the key is the raster band, and the value is the cell's raster value
+        elevation = float(rasterSample[band_index])  # band index
+        vec_layer.changeAttributeValue(int(feature.id()), idx_field, elevation)
         
-    # the key is the raster band, and the value is the cell's raster value
-    elevation = float(rasterSample[band_index])  # band index
-    vec_layer.changeAttributeValue(int(feature.id()), idx_field, elevation)
 vec_layer.commitChanges()
 Result = str(current)
