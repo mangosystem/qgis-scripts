@@ -1,4 +1,5 @@
 ##[GEEPS]=group
+##MyVariables=name
 ##vector_layer=vector
 ##vector_field=field vector_layer
 ##raster_layer=raster
