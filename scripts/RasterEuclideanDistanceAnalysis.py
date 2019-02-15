@@ -32,7 +32,9 @@ from qgis.core import (QgsProcessing,
                        QgsProcessingParameterNumber,
                        QgsProcessingParameterEnum,
                        QgsProcessingParameterExtent,
-                       QgsProcessingParameterRasterDestination)
+                       QgsProcessingParameterRasterDestination,
+                       QgsVectorFileWriter,
+                       QgsProviderRegistry)
 from processing.algs.gdal.GdalUtils import GdalUtils
 from osgeo import (gdal, ogr, osr)
 from osgeo.gdalconst import *
