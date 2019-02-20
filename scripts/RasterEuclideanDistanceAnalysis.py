@@ -143,7 +143,7 @@ class RasterEuclideanDistanceAnalysisAlgorithm(QgsProcessingAlgorithm):
         gdal.RasterizeLayer(rasterizedDS, [1], ogr_vector_layer, burn_values=[1])
 
         # compute proximity from rasterized dataset
-        options = []
+        options = ['DISTUNITS=GEO']
         if max_distance > 0:
           options.append('MAXDIST=' + str(max_distance))
 
