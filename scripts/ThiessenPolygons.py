@@ -25,20 +25,17 @@ from qgis.core import (QgsProcessing,
                        QgsProcessingException,
                        QgsProcessingAlgorithm,
                        QgsProcessingUtils,
-                       QgsProcessingParameterVectorLayer,
                        QgsFeatureRequest,
                        QgsFeatureSink,
                        QgsFeature,
                        QgsGeometry,
                        QgsPointXY,
                        QgsWkbTypes,
-                       QgsProcessingException,
                        QgsProcessingParameterNumber,
                        QgsProcessingParameterExtent,
                        QgsProcessingParameterFeatureSource,
                        QgsProcessingParameterFeatureSink,
-                       QgsVectorFileWriter,
-                       QgsProviderRegistry)
+                       QgsProcessingParameterVectorLayer)
 from processing.algs.gdal.GdalUtils import GdalUtils
 from processing.algs.qgis import voronoi
 
