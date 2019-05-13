@@ -22,11 +22,10 @@ reference:
 
 from PyQt5.QtCore import (QCoreApplication,
                           QVariant)
-from qgis.utils import iface
+from qgis.utils import (iface)
 from qgis.core import (QgsProcessing,
                        QgsProcessingException,
                        QgsProcessingAlgorithm,
-                       QgsProcessingUtils,
                        QgsFeatureRequest,
                        QgsFeatureSink,
                        QgsFeature,
@@ -35,15 +34,14 @@ from qgis.core import (QgsProcessing,
                        QgsFields,
                        QgsField,
                        QgsWkbTypes,
+                       QgsProject,
+                       QgsCoordinateTransform,
                        QgsProcessingParameterBoolean,
                        QgsProcessingParameterField,
                        QgsProcessingParameterEnum,
-                       QgsProcessingParameterNumber,
                        QgsProcessingParameterFeatureSource,
                        QgsProcessingParameterFeatureSink,
-                       QgsSpatialIndex,
-                       QgsVectorFileWriter,
-                       QgsProviderRegistry)
+                       QgsSpatialIndex)
 
 import processing
 import math, sys
@@ -161,12 +159,19 @@ class CreateWindRoseMapsAlgorithm(QgsProcessingAlgorithm):
             raise QgsProcessingException(self.invalidSinkError(parameters, self.OUTPUT_ANCHOR))
 
         # Center : X, Center Y. if not provided, the center of point layer will be used
+        source_crs = iface.mapCanvas().mapSettings().destinationCrs()
+        target_crs = source.sourceCrs()
+        transform = QgsCoordinateTransform(source_crs, target_crs, QgsProject.instance())
+        
         extent = source.sourceExtent()
         if center_type == 1:
             extent = iface.mapCanvas().extent()
         elif center_type == 2:
             extent = iface.mapCanvas().fullExtent()
-
+            
+        if center_type != 0 and source_crs != target_crs:
+           extent = transform.transformBoundingBox(extent);
+                
         center_point = extent.center(); # QgsPoint
 
         minx = extent.xMinimum()

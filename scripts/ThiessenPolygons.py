@@ -24,7 +24,6 @@ from PyQt5.QtCore import QCoreApplication
 from qgis.core import (QgsProcessing,
                        QgsProcessingException,
                        QgsProcessingAlgorithm,
-                       QgsProcessingUtils,
                        QgsFeatureRequest,
                        QgsFeatureSink,
                        QgsFeature,

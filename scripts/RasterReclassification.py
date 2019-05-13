@@ -112,7 +112,7 @@ class RasterReclassificationAlgorithm(QgsProcessingAlgorithm):
         if inputBand is None:
             raise QgsProcessingException('Cannot open raster band {}'.format(band))
         
-        nodata = inputBand.GetNoDataValue()
+        nodata = -9999
         gdal_output_type = gdal.GetDataTypeByName(raster_type)
 
         driver = gdal.GetDriverByName('GTiff')
@@ -135,7 +135,7 @@ class RasterReclassificationAlgorithm(QgsProcessingAlgorithm):
             
             output = ''.encode()
             for value in values:
-                reclassValue = value
+                reclassValue = nodata
                 if value == nodata:
                     reclassValue = nodata
                 else:
@@ -144,7 +144,7 @@ class RasterReclassificationAlgorithm(QgsProcessingAlgorithm):
                             reclassValue = reclass_values[index]
                             break
                         
-                reclassValue = int(reclassValue) if raster_type == 0 else float(reclassValue)
+                reclassValue = int(reclassValue) if raster_type == 'Int32' else float(reclassValue)
                 output = output + struct.pack(output_data_type, reclassValue)
                     
             # write line

@@ -79,6 +79,7 @@ class VectorToRasterConversionAlgorithm(QgsProcessingAlgorithm):
         self.addParameter(QgsProcessingParameterVectorLayer(self.INPUT, self.tr('Input Vector Layer'),
                                                            [QgsProcessing.TypeVector]))
         self.addParameter(QgsProcessingParameterField(self.FIELD, self.tr('Attribute Field'),
+                                                      type=QgsProcessingParameterField.Numeric,
                                                       parentLayerParameterName=self.INPUT, optional=True))
 
         self.addParameter(QgsProcessingParameterExtent(self.EXTENT, description=self.tr('Extent'), optional=True))
@@ -98,7 +99,7 @@ class VectorToRasterConversionAlgorithm(QgsProcessingAlgorithm):
         attribute_field = self.parameterAsString(parameters, self.FIELD, context)
         raster_type = self.RASTER_TYPES[self.parameterAsEnum(parameters, self.RASTER_TYPE, context)]
 
-        extent = self.parameterAsExtent(parameters, self.EXTENT, context)
+        extent = self.parameterAsExtent(parameters, self.EXTENT, context, source.sourceCrs())
         if extent is None or extent.width() == 0 or extent.height() == 0:
             extent = source.sourceExtent()
 

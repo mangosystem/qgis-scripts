@@ -90,7 +90,7 @@ class RasterEuclideanDistanceAnalysisAlgorithm(QgsProcessingAlgorithm):
         self.addParameter(QgsProcessingParameterEnum(self.RASTER_TYPE, self.tr('Raster Type'), 
                                                      self.RASTER_TYPES, 0, optional=True))
         
-        self.addParameter(QgsProcessingParameterRasterDestination(self.OUTPUT, self.tr('Output raster')))
+        self.addParameter(QgsProcessingParameterRasterDestination(self.OUTPUT, self.tr('Distance raster')))
         
     def processAlgorithm(self, parameters, context, feedback):
         source = self.parameterAsVectorLayer(parameters, self.INPUT, context)
@@ -100,7 +100,7 @@ class RasterEuclideanDistanceAnalysisAlgorithm(QgsProcessingAlgorithm):
         max_distance = self.parameterAsDouble(parameters, self.MAX_DISTANCE, context)
         raster_type = self.RASTER_TYPES[self.parameterAsEnum(parameters, self.RASTER_TYPE, context)]
         
-        extent = self.parameterAsExtent(parameters, self.EXTENT, context)
+        extent = self.parameterAsExtent(parameters, self.EXTENT, context, source.sourceCrs())
         if extent is None or extent.width() == 0 or extent.height() == 0:
             extent = source.sourceExtent()
         

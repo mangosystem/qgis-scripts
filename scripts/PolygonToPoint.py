@@ -24,16 +24,10 @@ from PyQt5.QtCore import QCoreApplication
 from qgis.core import (QgsProcessing,
                        QgsFeature,
                        QgsFeatureSink,
-                       QgsFields,
-                       QgsField,
-                       QgsGeometry,
-                       QgsPoint,
                        QgsWkbTypes,
                        QgsProcessingException,
                        QgsProcessingAlgorithm,
                        QgsProcessingParameterFeatureSource,
-                       QgsProcessingParameterField,
-                       QgsProcessingParameterString,
                        QgsProcessingParameterBoolean,
                        QgsProcessingParameterFeatureSink)
 import processing

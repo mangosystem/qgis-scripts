@@ -29,14 +29,9 @@ from qgis.core import (QgsProcessing,
                        QgsFields,
                        QgsField,
                        QgsGeometry,
-                       QgsPoint,
-                       QgsWkbTypes,
                        QgsProcessingException,
                        QgsProcessingAlgorithm,
-                       QgsProcessingParameterFeatureSource,
-                       QgsProcessingParameterField,
                        QgsProcessingParameterString,
-                       QgsProcessingParameterBoolean,
                        QgsProcessingParameterFeatureSink)
 import processing
 
